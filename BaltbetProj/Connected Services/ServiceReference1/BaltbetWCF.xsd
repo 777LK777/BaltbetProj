@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BaltbetWCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BaltbetWCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPlayers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Players" nillable="true" type="tns:Players" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayers" nillable="true" type="tns:ArrayOfPlayers" />
+  <xs:complexType name="Players">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Balance" type="xs:double" />
+      <xs:element minOccurs="0" name="Birth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patronymic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Players" nillable="true" type="tns:Players" />
+  <xs:complexType name="ArrayOfBets">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Bets" nillable="true" type="tns:Bets" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBets" nillable="true" type="tns:ArrayOfBets" />
+  <xs:complexType name="Bets">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdClient" type="xs:int" />
+      <xs:element minOccurs="0" name="Prise" type="xs:double" />
+      <xs:element minOccurs="0" name="Ratio" type="xs:double" />
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="Summ" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bets" nillable="true" type="tns:Bets" />
+</xs:schema>
